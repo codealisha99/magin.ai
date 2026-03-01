@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fdfbf7;
+  --foreground: #2c3e50;
+  
+  --primary: #2c3e50;
+  --secondary: #6a89cc;
+  --accent: #f8a5c2;
+  
+  --pastel-rose: #f9ebea;
+  --pastel-sage: #e8f5e9;
+  --pastel-sky: #e1f5fe;
+  --pastel-gold: #fef9e7;
+  
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  
+  --color-pastel-rose: var(--pastel-rose);
+  --color-pastel-sage: var(--pastel-sage);
+  --color-pastel-sky: var(--pastel-sky);
+  --color-pastel-gold: var(--pastel-gold);
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-script: "Caveat", cursive;
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold;
+  }
+}
+
+.hand-drawn {
+  @apply font-script text-xl;
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+.soft-shadow {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
